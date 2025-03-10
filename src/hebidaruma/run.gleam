@@ -205,7 +205,8 @@ pub fn help() {
 // TODO error handling 
 /// returns the package version from the gleam.toml file 
 fn parse_version() -> String {
-  simplifile.read("gleam.toml")
+  "hebidaruma "
+  <> simplifile.read("gleam.toml")
   |> result.unwrap("")
   |> string.drop_start(31)
   |> string.split(on: "\"")
