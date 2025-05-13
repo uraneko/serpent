@@ -3,7 +3,7 @@ import gleam/io
 import gleam/result
 
 // internal imports 
-import hebidaruma/registry.{fetch_package_meta, new_parser, parse_chars}
+import hebi/registry.{fetch_package_meta, new_parser, parse_chars}
 
 pub fn main() {
   let resp =
@@ -14,6 +14,5 @@ pub fn main() {
   let parser = new_parser(resp)
   io.debug(parser)
 
-  let json = parse_chars(parser)
-  json |> io.debug()
+  parse_chars(parser) |> io.debug()
 }

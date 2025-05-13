@@ -11,8 +11,8 @@ type Dict(a, b) =
   dict.Dict(a, b)
 
 // internal imports
-import hebidaruma/colors.{blue, colorize, green, red, rose, yellow}
-import hebidaruma/parse.{
+import hebi/colors.{blue, colorize, green, red, rose, yellow}
+import hebi/parse.{
   type CLICommand, type InitData, Help, Init, InitErr, Log, Opts, OptsWithArgs,
   Version,
 }
@@ -50,7 +50,7 @@ const help_opts = [
   ),
   HelpOpt(
     name: "no tests",
-    desc: "Don't add testing dependencies (playwright, )",
+    desc: "Don't add testing dependencies (vitest)",
     arg: option.None,
   ),
   HelpOpt(
@@ -205,7 +205,7 @@ pub fn help() {
 // TODO error handling 
 /// returns the package version from the gleam.toml file 
 fn parse_version() -> String {
-  "hebidaruma "
+  "hebi "
   <> simplifile.read("gleam.toml")
   |> result.unwrap("")
   |> string.drop_start(31)

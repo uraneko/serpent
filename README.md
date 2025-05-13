@@ -1,10 +1,13 @@
-# hebidaruma
+# hebi
 
-[![Package Version](https://img.shields.io/hexpm/v/hebidaruma)](https://hex.pm/packages/hebidaruma)
-[![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/hebidaruma/)
+> [![Package Version](https://img.shields.io/hexpm/v/hebi)](https://hex.pm/packages/hebi)
+> [![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/hebi/)
 
-hebidaruma is a cli tool for initializing javascript project directories.
+hebi is a cli tool for initializing javascript project directories.
 This exists because none of the existing js package managers allow the user to customize their init command. While this doesn't do that \`yet\`, it generates the stuff I want at project initialization.
+
+> [!NOTE]
+> README is still TODO
 
 #### ToC 
 [Installation](#Installation)
@@ -17,7 +20,13 @@ This exists because none of the existing js package managers allow the user to c
 
 ## Installation
 
+> [!NOTE]
+> TODO
+
 ## Usage 
+
+> [!NOTE]
+> TODO
 
 ## Development
 
@@ -30,15 +39,15 @@ gleam test  # Run the tests
 This project is licensed under the <a href="LICENSE">MIT</a> license. 
 
 ```sh
-gleam add hebidaruma@1
+gleam add hebi@1
 ```
 ```gleam
-import hebidaruma
+import hebi
 
 pub fn main() {
   // TODO: An example of the project in use
 }
 ```
 
-Further documentation can be found at <https://hexdocs.pm/hebidaruma>.
+Further documentation can be found at <https://hexdocs.pm/hebi>.
 

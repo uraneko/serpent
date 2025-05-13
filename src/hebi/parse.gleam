@@ -7,7 +7,7 @@ import gleam/result
 import gleam/string
 
 // internal imports
-// import hebidaruma/run
+// import hebi/run
 
 // external imports
 import argv
