@@ -16,8 +16,8 @@ import gleam/string
 // https://github.com/npm/registry/blob/main/docs/REGISTRY-API.md#get-v1search
 const registry = "https://registry.npmjs.org/"
 
-// fetches the metadata of a package version from the registry
-// always fetches the latest version
+/// fetches the metadata of a package version from the registry
+/// always fetches the latest version
 pub fn fetch_package_meta(name: String) -> Result(String, httpc.HttpError) {
   let assert Ok(req) = request.to(registry <> name <> "/latest")
 
@@ -34,7 +34,7 @@ pub fn fetch_package_meta(name: String) -> Result(String, httpc.HttpError) {
   }
 }
 
-// fetches the metadata of the specified package version from the registry
+/// fetches the metadata of the specified package version from the registry
 pub fn fetch_package_version_meta(
   name: String,
   version: String,
@@ -65,16 +65,16 @@ pub fn parse_chars(parser: JsonParser) -> Json {
   // io.debug(parser.temp.kind)
   // io.print("tempval: ")
   // io.debug(parser.temp.val)
-  io.println("parser json is")
-  {
-    use json <- list.map(parser.json)
-    io.debug(json)
-  }
-  io.println("")
-  io.println("temp=<" <> parser.temp.val <> ">")
-  io.println("")
-  io.println("char=<" <> parser.str |> list.first() |> result.unwrap("") <> ">")
-  io.println("	-----	")
+  // io.println("parser json is")
+  // {
+  //   use json <- list.map(parser.json)
+  //   io.debug(json)
+  // }
+  // io.println("")
+  // io.println("temp=<" <> parser.temp.val <> ">")
+  // io.println("")
+  // io.println("char=<" <> parser.str |> list.first() |> result.unwrap("") <> ">")
+  // io.println("	-----	")
 
   case parser.str |> list.is_empty() {
     True ->
@@ -668,7 +668,7 @@ fn match_char(parser: JsonParser, char: String) -> JsonParser {
           case parser.temp.kind {
             0 -> parser |> parser_temp(temp_val_plus(parser.temp, char))
             1 | 2 -> {
-              io.println("pushing num to json items list")
+              // io.println("pushing num to json items list")
               let p =
                 parser
                 |> parser_item_push(JsonParseItem(
